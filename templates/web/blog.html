@@ -1,0 +1,341 @@
+﻿{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Breadcrumb Area -->
+    <div class="breadcrumb-area  margin-bottom-120" >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="breadcrumb-inner">
+                        <span>What we provide for you</span>
+                        <h2 class="page-title hover-zoom ">How Gadlix Can Help Your Business Grow with Digital Marketing</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Our Provide Area -->
+    <section class="our-service-area padding-bottom-120">
+        <div class="container">
+            <div class="row">
+
+                {% for update in updates %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-what-we-service-item margin-bottom-60">
+                            <div class="single-what-img">
+                                <a href="{% url 'Web:blogDetails' update.slug %}">
+                                <img src="{{update.image.crop.306x505}}" alt="">
+                            </div>
+                            <div class="content-wrapper">
+                                <!-- <div class="icon">
+                                    <i class="flaticon-2-billboard"></i>
+                                </div> -->
+                                <div class="content">
+                                    <h4 class="title">{{update.title}}</h4>
+                                    <p>{{update.summary}}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+
+               
+            </div>
+        </div>
+    </section>
+    <!-- Inner service Area -->
+    <div class="inner-service-section padding-top-105 padding-bottom-90 bg-image" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-layers"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Multi Format Media</h4>
+                            <p>
+                                Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-favorites"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Smartly Planned</h4>
+                            <p>
+                                Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-checked"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Build Brands</h4>
+                            <p>
+                                Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-placeholder"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Retail Space</h4>
+                            <p>
+                                Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-shield"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Naming Rights</h4>
+                            <p>
+                                Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-heart"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Vast Branding</h4>
+                            <p>
+                                Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% comment %}
+
+    <!-- testimonial area start  -->
+    <section class="testimonial-area padding-top-120 padding-bottom-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-7">
+                    <div class="testimonial-top padding-bottom-50 padding-top-55">
+                        <div class="section-title">
+                            <div class="icon">
+                                <i class="flaticon-right-quote-1"></i>
+                            </div>
+                            <h2 class="title">Clinets testimonial </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonial-carousel-area margin-top-100">
+                        <div class="testimonial-carousel">
+                            <div class="single-testimonial-item">
+                                <div class="content">
+                                    <div class="content-wrapper">
+                                        <p class="description">I found myself working in a true partnership that results in an extra incredible experience of us </p>
+                                    </div>
+                                    <div class="author-details">
+                                        <div class="thumb">
+                                            <img src="{% static 'web/img/testimonial/01.jpg' %}" alt="testimonial">
+                                        </div>
+                                        <div class="author-meta">
+                                            <h4 class="title">
+                                                Albert Haris
+                                            </h4>
+                                            <span class="designation">CEO, art media</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-testimonial-item">
+                                <div class="content">
+                                    <div class="content-wrapper">
+                                        <p class="description">I found myself working in a true partnership that results in an extra incredible experience of us </p>
+                                    </div>
+                                    <div class="author-details">
+                                        <div class="thumb">
+                                            <img src="{% static 'web/img/testimonial/02.jpg' %}" alt="testimonial">
+                                        </div>
+                                        <div class="author-meta">
+                                            <h4 class="title">
+                                                David Mcmilan
+                                            </h4>
+                                            <span class="designation">CEO, art media</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonial area end -->
+    <!-- Request free quote -->
+    <div class="request-area bg-image" style="background-image: url({% static 'web/img/bg/bg-faq.jpg' %})">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <div class="left-content-area">
+                        <div class="section-title padding-top-25 margin-bottom-55">
+                            <p class="meta">faqs</p>
+                            <h2 class="title">Most asked questions</h2>
+                        </div>
+                        <div class="accordion-wrapper">
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="collapsed">
+                                                What Is agency ?
+                                            </a>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Start building your brand equity with the strategic one. Creative has been focusing on project management. your brand equity with the strategic one.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                How to purchase ?
+
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            If you are accused of committing a crime, you will need the very best criminal defense attorneys in Fresno. We are especially skilled.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Can i use for free ?
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            If you are accused of committing a crime, you will need the very best criminal defense attorneys in Fresno. We are especially skilled.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                        <h5 class="mb-0">
+                                            <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                                Dont be hesitate
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                        <div class="card-body">
+                                            If you are accused of committing a crime, you will need the very best criminal defense attorneys in Fresno. We are especially skilled.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="right-content-area">
+                        <div class="request-page-form-wrap">
+                            <h4 class="title">reach out via the from below</h4>
+                            <form action="https://freakytheme.com/html/outmedia/request.html" class="request-page-form" novalidate="novalidate">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="fname" placeholder="First Name" class="form-control" required="" aria-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="lname" placeholder="Last Name" class="form-control" required="" aria-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="telephone" placeholder="Telephone" class="form-control" required="" aria-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="phone" placeholder="Phone" class="form-control" required="" aria-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="submit" value="Submit Form" class="submit-btn">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endcomment %}
+    <!--=======================
+    Client Section
+    ========================-->
+    <div class="client-section bg-liteblue padding-top-120 padding-bottom-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title desktop-center padding-bottom-25">
+                        <h3 id="clinttit" class="client-title">
+                            WHO WORKED WITH US
+    
+                        </h3>
+                        <h2 class="hover-zoom" id="clintshow">CLIENT SHOWCASE</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="client-area">
+                        {% include 'web/partials/clients.html'  %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    {% endblock %}

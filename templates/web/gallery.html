@@ -1,0 +1,181 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+    <!-- Breadcrumb Area -->
+    <div class="breadcrumb-area" style="background-image:url({% static 'web/img/breadcrumb/01.jpg' %});">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="breadcrumb-inner">
+                        <span>Our Gallery</span>
+                        <h2 class="page-title hover-zoom ">We have done spectacular project</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Case Studies Area -->
+    <div class="case-studies-area padding-bottom-120 padding-top-110">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="case-studies-masonry-wrapper">
+                        <!-- <ul class="case-studies-menu">
+                            <li class="active" data-filter="*">All <span>/</span> </li>
+                            <li data-filter=".cloud">Billboard <span>/</span> </li>
+                            <li data-filter=".data"> Hoarding <span>/</span> </li>
+                            <li data-filter=".cyber">Digital Ad <span>/</span> </li>
+                            <li data-filter=".cyber">Transport <span>/</span> </li>
+                            <li data-filter=".analytics">Shopping </li>
+                        </ul> -->
+                        <div class="case-studies-masonry row">
+                            {% for gallery in gallery %}
+                            <div class="col-lg-3 col-md-4 col-sm-6 masonry-item shofa">
+                                <div class="single-case-studies-item">
+                                    <div class="thumb" id="galleryimg">
+                                        <img src="{{gallery.image.crop.428x396}}" alt="our work image">
+                                        <div class="icon">
+                                            <a class="image-popup" href="{{gallery.image.url}}"><span>+</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h3 class="title">{{gallery.title}}
+                                            </h3>
+                                        </a>
+                                        <!-- <p>Billboard</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <!-- <div class="col-lg-3 col-md-4 col-sm-6 masonry-item cloud">
+                                <div class="single-case-studies-item">
+                                    <div class="thumb">
+                                        <img src="{% static 'web/img/case-study-two/02.jpg' %}" alt="our work image">
+                                        <div class="icon">
+                                            <a class="image-popup" href="{% static 'web/img/case-study-two/02.jpg' %}"><span>+</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h3 class="title">Digital Playlist
+                                            </h3>
+                                        </a>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 masonry-item data">
+                                <div class="single-case-studies-item">
+                                    <div class="thumb">
+                                        <img src="{% static 'web/img/case-study-two/03.jpg' %}" alt="our work image">
+                                        <div class="icon">
+                                            <a class="image-popup" href="{% static 'web/img/case-study-two/03.jpg' %}"><span>+</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h3 class="title">Mockup World
+                                            </h3>
+                                        </a>
+                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 masonry-item cyber remove-col-padding">
+                                <div class="single-case-studies-item">
+                                    <div class="thumb">
+                                        <img src="{% static 'web/img/case-study-two/04.jpg' %}" alt="our work image">
+                                        <div class="icon">
+                                            <a class="image-popup" href="{% static 'web/img/case-study-two/04.jpg' %}"><span>+</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h3 class="title">Mockup World
+                                            </h3>
+                                        </a>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 masonry-item analytics remove-col-padding">
+                                <div class="single-case-studies-item">
+                                    <div class="thumb">
+                                        <img src="{% static 'web/img/case-study-two/05.jpg' %}" alt="our work image">
+                                        <div class="icon">
+                                            <a class="image-popup" href="{% static 'web/img/case-study-two/05.jpg' %}"><span>+</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h3 class="title">Mockup World
+                                            </h3>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 masonry-item cloud">
+                                <div class="single-case-studies-item">
+                                    <div class="thumb">
+                                        <img src="{% static 'web/img/case-study-two/06.jpg' %}" alt="our work image">
+                                        <div class="icon">
+                                            <a class="image-popup" href="{% static 'web/img/case-study-two/06.jpg' %}"><span>+</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h3 class="title">Mockup World
+                                            </h3>
+                                        </a>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 masonry-item data">
+                                <div class="single-case-studies-item">
+                                    <div class="thumb">
+                                        <img src="{% static 'web/img/case-study-two/07.jpg' %}" alt="our work image">
+                                        <div class="icon">
+                                            <a class="image-popup" href="{% static 'web/img/case-study-two/07.jpg' %}"><span>+</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h3 class="title">Mockup World
+                                            </h3>
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 masonry-item cyber">
+                                <div class="single-case-studies-item">
+                                    <div class="thumb">
+                                        <img src="{% static 'web/img/case-study-two/08.jpg' %}" alt="our work image">
+                                        <div class="icon">
+                                            <a class="image-popup" href="{% static 'web/img/case-study-two/08.jpg' %}"><span>+</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h3 class="title">Mockup World
+                                            </h3>
+                                        </a>
+                                    
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    {% endblock %}

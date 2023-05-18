@@ -1,0 +1,161 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Breadcrumb Area -->
+    <div class="breadcrumb-area  margin-bottom-120" style="background-image:url({% static 'web/img/breadcrumb/01.jpg' %});">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="breadcrumb-inner">
+                        <span>Contact Us</span>
+                        <h2 class="page-title hover-zoom">Keep in touch with us with anytime</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Area -->
+    <div class="contact-inner-area padding-bottom-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-inner-content margin-bottom-20">
+                        <h2 class="title-md">
+                            Let's discuss your new projects now
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="single-contact-item margin-bottom-40">
+                                <h3 class="title">Address</h3>
+                                <p>MA Arcade, Near Calicut Airport, Kerala, India</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="single-contact-item margin-bottom-40">
+                                <h3 class="title">Call Us</h3>
+                                <a href="tel:+91 96053 64611">+91 9288004433</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="single-contact-item margin-bottom-40">
+                                <h3 class="title">office time</h3>
+                                <p>Monday – Saturday <br> 9 am to 8 pm EST</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="single-contact-item margin-bottom-40">
+                                <h3 class="title">Mail Us</h3>
+                                <a href="mailto:info@gadlix.com">info@gadlix.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form action="" class="contact-page-form" method="POST" novalidate="novalidate" id="form">
+                            
+                            {% csrf_token %}
+                            
+                               
+                            
+                                {% comment %} {{form.as_p}} {% endcomment %}
+                            
+                                
+                            
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        
+                                        {% comment %} <label for="">{{form.name.label}}</label> {% endcomment %}
+	                                    {{form.name}}  
+                                        {{form.name.errors}}                                 
+                                    </div>
+                                </div>
+                               
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        {% comment %} <label for="{{form.company.id_for_label}}">{{form.company.label}}</label> {% endcomment %}
+                                        {{form.company}}
+                                        {{form.company.errors}}
+                                        <!-- <input type="text" name="lname" placeholder="Company" class="form-control" required="" aria-required="true"> -->
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        {% comment %} <label for="{{form.phone.id_for_label}}">{{form.phone.label}}</label> {% endcomment %}
+                                        {{form.phone}}
+                                        {{form.phone.errors}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        {% comment %} <label for="{{form.email.id_for_label}}">{{form.email.label}}</label> {% endcomment %}
+                                        {{form.email}}
+                                        {{form.email.errors}}
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        {% comment %} <label for="{{form.website.id_for_label}}">{{form.website.label}}</label> {% endcomment %}
+                                        {{form.website}}
+                                        {{form.website.errors}}
+                                    </div>
+                               <div>
+                                    <h6>Let us know what you're interested in! Check all that apply</h6>
+                                    
+                                    {{ form.Services }}
+                                    {{ form.Services.errors}}
+                                </div>   
+
+                                </div> 
+
+                                <div class="col-md-12" style="padding-top: 15px;">
+                                    <div class=" form-group btn-wrapper">
+                                        <div class="but mt-5"><input type="submit" value="Submit Form" id="ba"></div>
+                                    </div>
+                                </div>
+
+                        
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Map Area -->
+    <div class="map-area">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="contact_map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.487589643727!2d75.9481966141193!3d11.151488855209529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xff85f70cdb53a39a!2zMTHCsDA5JzA1LjMiTiA3NcKwNTcnMDEuNCJF!5e0!3m2!1sen!2sin!4v1643793767106!5m2!1sen!2sin" style="border:0;width: 100%;height: 450px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ 
+    <!-- <script>
+        // Alert Modal Type
+    $(document).on('click', '#success', function(e) {
+    swal(
+        'Success',
+        'message successfully sent',
+        'success'
+    )
+    });
+
+  </script> -->
+
+    {% endblock %}
+
+
+    

@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gadlix</title>
+    <!-- favicon -->
+    <link rel=icon href="{% static 'web/img/WhatsApp_Image_2023-03-29_at_10.30.50_AM-removebg-preview.png' %}" sizes="50x50" type="image/png" class="ilinkicon">
+    <!-- animate -->
+    <link rel="stylesheet" href="{% static 'web/css/animate.css' %}">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="{% static 'web/css/magnific-popup.css' %}">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="{% static 'web/css/owl.carousel.min.css' %}">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="{% static 'web/css/font-awesome.min.css' %}">
+    <!-- flaticon -->
+    <link rel="stylesheet" href="{% static 'web/css/flaticon.css' %}">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
+    <!-- responsive Stylesheet -->
+    <link rel="stylesheet" href="{% static 'web/css/responsive.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVZ2WGF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="conbut">
+<a target="_blank" href="https://wa.me/9288004433" id="whatsapp-button" class="whatsapp-button"><i class="fab fa-whatsapp"></i></a>
+<br>
+<a target="_blank" href="tel:+919288004433" class="phone-button"><i class="fa fa-phone"></i></a>
+</div>
+
+    <div class="body-overlay" id="body-overlay"></div>
+    {% include 'web/partials/header.html'  %}
+    {% block content %}
+    
+    {% endblock %}
+    {% include 'web/partials/footer.html'  %}
+
+
+   <!-- preloader area start -->
+   {% comment %} <div id="preloader">
+       <div id="loader"></div>
+    </div> {% endcomment %}
+    <!-- preloader area end -->
+    
+    <!-- jquery -->
+    <script src="{% static 'web/js/jquery-2.2.4.min.js' %}"></script>
+<!-- popper -->
+<script src="{% static 'web/js/popper.min.js' %}"></script>
+<!-- bootstrap -->
+<script src="{% static 'web/js/bootstrap.min.js' %}"></script>
+<!-- magnific popup -->
+<script src="{% static 'web/js/jquery.magnific-popup.js' %}"></script>
+<!-- wow -->
+<script src="{% static 'web/js/wow.min.js' %}"></script>
+<!-- owl carousel -->
+<script src="{% static 'web/js/owl.carousel.min.js' %}"></script>
+<!-- waypoint -->
+<script src="{% static 'web/js/waypoints.min.js' %}"></script>
+<!-- counterup -->
+<script src="{% static 'web/js/jquery.counterup.min.js' %}"></script>
+<!-- imageloaded -->
+<script src="{% static 'web/js/imagesloaded.pkgd.min.js' %}"></script>
+<!-- isotope -->
+<script src="{% static 'web/js/isotope.pkgd.min.js' %}"></script>
+<!-- Progress-Bar -->
+<script src="{% static 'web/js/jQuery.rProgressbar.min.js' %}"></script>
+<!-- Progress-Bar Active js -->
+<script src="{% static 'web/js/active.rProgressbar.js' %}"></script>
+<!-- ajax -->
+<script src="{% static 'web/js/ajax.js' %}"></script>
+
+
+
+<!-- main js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- SweetAlert2 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+<script src="{% static 'web/js/main.js' %}"></script>
+<script src="{% static 'https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js' %}"></script>
+{% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> {% endcomment %}
+</body>
+
+</html>

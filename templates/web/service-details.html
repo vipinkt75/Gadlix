@@ -1,0 +1,166 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+    <!-- Breadcrumb Area -->
+    <div class="breadcrumb-area  margin-bottom-120" style="background-image:url('{% static 'web/img/breadcrumb/01.jpg' %}');">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="breadcrumb-inner">
+                        <span>What we provide for you</span>
+                        <h2 class="page-title hover-zoom ">{{service.title}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- we offer  -->
+    <section class="service-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="service-area">
+                        <p id="servicesing" class="meta">service single</p>
+                        <p class="" style="font-weight: 900;color: black;">{{service.summary}}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div id="servdetai" class="section-p padding-top-40">
+                        <p style="text-align: justify;">{{service.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-wrapper bg-image margin-top-100 margin-bottom-120 padding-bottom-90">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="service-inner-item">
+                            <h3 class="title-md-line">
+                                why choose us
+                            </h3>
+                            <p style="color: black !important;">{{service.content|safe}}</p>
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class=" ">
+                            <img src="{{service.image.crop.1271x674}}" alt=""class="serviimg ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% comment %} <!-- Inner service Area -->
+    <div class="inner-service-section padding-top-105 padding-bottom-90 bg-image" style="background-image: url('{% static 'web/img/bg/team-bg.jpg' %}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-layers"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Multi Format Media</h4>
+                            <p>Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-favorites"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Smartly Planned</h4>
+                            <p>Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-checked"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Build Brands</h4>
+                            <p>Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-placeholder"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Retail Space</h4>
+                            <p>Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-shield"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Naming Rights</h4>
+                            <p>Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-why-us-box style-01 margin-bottom-60">
+                        <div class="icon" id="homeicon">
+                            <i class="flaticon-3-heart"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Vast Branding</h4>
+                            <p>Start building your brand with the strategic one. industry expertise to solutions that .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+  
+{% comment %} 
+    <div class="client-section bg-liteblue padding-top-120 padding-bottom-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title desktop-center padding-bottom-50">
+                        <h3 class="client-title">
+                            We have more then 20k satified clients those happy work with us.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="client-area">
+                        {% include 'web/partials/clients.html'  %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+
+    {% endblock %}
+
+    

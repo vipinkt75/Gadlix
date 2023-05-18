@@ -1,0 +1,77 @@
+ {% load static %}
+    <div class="header">
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TVZ2WGF');</script>
+    <!-- End Google Tag Manager -->
+
+        <!-- support bar area end -->
+        <nav class="navbar nav-custom navbar-expand-lg">
+            <div class="container nav-custom-container">
+                <div class="responsive-mobile-menu">
+                    <div class="logo-wrapper">
+                        <a href="{% url 'Web:index' %}" class="logo">
+    
+                            <img id="def2" class="def hover-zoom" src="{% static 'web/img/gadlix_logo__black-01-removebg-preview.png' %}" alt="">
+                            <img id="def1" class="def1 hover-zoom " src="{% static 'web/img/WhatsApp_Image_2023-03-29_at_10.30.50_AM-removebg-preview.png' %}" alt="">
+
+                            {% comment %} <img class="alt" src="{% static 'web/img/GADLIX-BLACK.png' %}" alt=""> {% endcomment %}
+                        </a>
+                    </div>
+                    <a href="" class="navbar-toggler cross-menu" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="cross-menu-wrapper">
+                            <span class="bar1"></span>
+                            <span class="bar2"></span>
+                            <span class="bar3"></span>
+                        </span>
+                    </a>
+                   
+                </div>
+                <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
+                    <ul class="nav-custom-menu navbar-nav ">
+                        <li class="hover-zoom {% if is_index %}current-menu-item{% endif %}">
+                            <a href="{% url 'Web:index' %}">Home</a>
+                        </li>
+                        <li class="hover-zoom {% if is_about %}current-menu-item{% endif %}">
+                            <a href="{% url 'Web:about' %}">About</a>
+                          
+                        </li>
+                        <li class="hover-zoom {% if is_service %}current-menu-item{% endif %}" >
+                            <a href="{% url 'Web:services' %}">Services</a>
+                        </li>
+                        <li class="hover-zoom {% if is_gallery %}current-menu-item{% endif %}"><a href="{% url 'Web:gallery' %}">Gallery</a></li>
+                        <li class="hover-zoom {% if is_update %}current-menu-item{% endif %}"><a href="{% url 'Web:blog' %}">Updates</a></li>
+                        <li class="hover-zoom {% if is_contact %}current-menu-item{% endif %} d-lg-none d-sm-block d-block"><a href="{% url 'Web:contact' %}">Contact Us</a></li>
+                        
+                        <!--<li><a href="blog-details.html">Blog</a></li>-->
+                    </ul>
+                </div>
+                <div class="nav-right-content">
+                    <div class="icon-part">
+                        <ul class="social_link">
+                            <li><a href="https://www.facebook.com/gadlixadvertising?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/gadlixadvertising/?igshid=MjljNjAzYmU%3D"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/gadlix"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/90763604/admin/notifications/all/"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                        <!-- <ul class="cart-icon">
+                            <li id="search"><a href="#"><i class="flaticon-magnifying-glass
+                                                    "></i></a></li>
+                            <li class="cart"><a href="#"><i class="flaticon-shopping-bag"></i></a></li>
+                        </ul> -->
+                    </div>
+                    <div class="btn-wrapper">
+                        {% comment %} <a href="{% url 'Web:contact' %}" class="boxed-btn blank">contact Us</a> {% endcomment %}
+                        {% comment %} <a href="{% url 'Web:contact' %}"></a> {% endcomment %}
+                        <a href="{% url 'Web:contact' %}"><button class="headbutton ">CONTACT US</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar area end -->
+    </div>

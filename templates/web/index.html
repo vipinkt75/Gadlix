@@ -1,0 +1,671 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="" id="home">
+
+    <div class="header-area header-bg" style="background-position: center !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-inner">
+                        <!-- header inner -->
+                        <!-- <div class="headtotal">
+                            <h1 id="headtotal" class="title">EXPLORE <br>
+                                <span id="headersp">THE ART OF </span>
+                                <span id="headersk">DIGITAL </span>
+                                <span id="headerspan">MARKETING</span>
+                            </h1>
+                        </div> -->
+                        <div class="head">
+                            <h1 class="head1">EXPERIENCE<br> THE POWER OF DATA-DRIVEN<br>
+                                <span id="headerspan">DIGITAL MARKETING</span> STRATEGIES
+                            </h1>
+                        </div>
+                        <br>
+                        <!-- <H1 class="hesec1" id="hesec1">DIJITAL MARKETING <span class="hesec2" id="hesec2"> RESEAECH BAND</span></H1> -->
+                        <div class="btn-wrapper  desktop-left padding-top-30">
+                            {% comment %} <a href="{% url 'Web:services' %}" id="vibutton" class="boxed-btn">our
+                                service</a> {% endcomment %}
+                            {% comment %} <a href="{% url 'Web:services' %}">our service</a> {% endcomment %}
+                            <a href="{% url 'Web:services' %}"><button class="sec1button">OUR SERVICE</button></a>
+                        </div>
+                    </div>
+                    <!-- //.header inner -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="counterup-area padding-bottom-80">
+    <div class="container">
+        <div class="counter-area m-top bg-white padding-top-110 padding-bottom-105">
+            <div id="contai" class="row">
+                <div class="col-lg-6">
+                    <div class="section-inner">
+                        <h2 class="section-inner-title">
+                            WE CREATE <br> NEXT-LEVEL
+                            <span class="soluhead" id="soluhead">DIGITAL</span>
+                            <span>MARKETING</span>
+                        </h2>
+                        <div class="btn-wrapper">
+                            <a class="who-btn" href="{% url 'Web:about' %}">SOLUTIONS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="counter-content">
+                                <p>We are a value-driven digital marketing agency in Calicut, Kerala. Our core values
+                                    inspire us to push our boundaries and set benchmarks for others.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-6">
+                            <div class="single-counterup-01">
+                                <div class="content">
+                                    <div id="clintsolution" class="count-wrap"><span class="count-num">100</span>+</div>
+                                    <h4 class="title">Happy Clients </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-6">
+                            <div class="single-counterup-01">
+                                <div class="content">
+                                    <div class="count-wrap"><span class="count-num">10</span>+</div>
+                                    <h4 class="title"> Service Countries </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-6">
+                            <div class="single-counterup-01">
+                                <div class="content">
+                                    <div class="count-wrap"><span class="count-num">10</span>+</div>
+                                    <h4 class="title">Skilled Laborours</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Our Provide Area -->
+<section class="our-service-area padding-bottom-120" id="service">
+    <div class="bg-text">
+        <span class="title">Service</span>
+    </div>
+    <div id="contairespo" class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title desktop-center padding-top-25 margin-bottom-55">
+                    <p class="meta">what we do</p>
+                    <h2 id="our-service" class="hover-zoom title">our SERVICES <span>.</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div id="owl-carousel" class=" d-md-none">
+            <div class="service-carousel">
+                {% for service in services %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-what-we-service-item margin-bottom-30">
+                        <a href="{% url 'Web:serviceDetails' service.id %}">
+                            <div class="single-what-img">
+                                <img src="{{service.image.crop.360x505}}" alt="">
+                            </div>
+                            <div class="content-wrapper">
+                                <div class="content">
+                                    <h4 class="title">{{service.title}}</h4>
+                                    <p>{{service.summary}}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            {% for service in services %}
+            <div id="servcaro" class="col-lg-4 col-md-6">
+                <div class="single-what-we-service-item margin-bottom-30">
+                    <a href="{% url 'Web:serviceDetails' service.id %}">
+                        <div class="single-what-img">
+                            <img src="{{service.image.crop.360x505}}" alt="">
+                        </div>
+                        <div class="content-wrapper">
+                            <div class="content">
+                                <h4 class="title">{{service.title}}</h4>
+                                <p>{{service.summary}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-lg-12">
+                <div class="btn-wrapper desktop-center margin-top-30">
+                    <a href="{% url 'Web:services' %}" class="bnk">Our Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Advertising -->
+<div class="our-advertising-area bg-image padding-top-110 padding-bottom-110" id="about">
+    <div class="line-b"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title white">
+                    <h2 id="empowering" class="title">
+                        Empowering your digital success
+                    </h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="our-milestone">
+                    <h2 class="title"> WE WORK CLOSELY WITH OUR CLIENTS TO FULFILL THEM WITH PERSONALIZED DIGITAL
+                        MARKETING SOLUTIONS THAT ELEVATES THEIR COMPANY VALUE.</h2>
+                    <div class="milestone-plan">
+                        <div class="progress-item-wrapper">
+                            <div class="progress-item">
+                                <div class="single-progressbar">
+                                    <h4 class="subtitle">Planning</h4>
+                                    <div class="html"></div>
+                                </div>
+                                <div class="single-progressbar">
+                                    <h4 class="subtitle">Strategy</h4>
+                                    <div class="css"></div>
+                                </div>
+                                <div class="single-progressbar">
+                                    <h4 class="subtitle">Performance</h4>
+                                    <div class="php"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Our Business Growth -->
+<section class="our-business-area padding-bottom-120 padding-top-120 " id="bussarea">
+    <div id="contarespon" class="container">
+        <div class="business-growth bg-image margin-bottom-90">
+            <div class="row justify-content-center ">
+                <div class="col-md-6 offset-md-6 ">
+                    <div class="business-growth-top ">
+                        <div class="section-title padding-top-40 margin-bottom-55">
+                            <h2 id="respotitt" class="title">We help to create eye attention.
+                            </h2>
+                            <p>We create digital marketing solutions that catch people’s eyes and attention. Build your
+                                brand/ company with Gadlix.</p>
+                            <div class="vdo-btn">
+                                <a class="mfp-iframe video-play-btn "
+                                    href="https://www.youtube.com/watch?v=-ZwQtICNbRc"><span class="video-play"><i
+                                            class="fas fa-play mfp-iframe"></i></span>Play video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="resporew" class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-why-us-box margin-bottom-20">
+                    <div class="icon hover-zoom" id="homeicon">
+                        <i class="flaticon-3-layers"></i>
+                    </div>
+                    <div class="content">
+                        <h4 class="title">SMART PLANS</h4>
+                        <p>Adequate strategies to help your business achieve its marketing goals and stand out in a
+                            competitive market.
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-why-us-box margin-bottom-20">
+                    <div class="icon hover-zoom" id="homeicon">
+                        <i class="flaticon-3-favorites"></i>
+                    </div>
+                    <div class="content">
+                        <h4 class="title">BUILD BRANDS</h4>
+                        <p>Boost your business with stunning digital branding services from Gadlix and take your brand
+                            to the next level
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-why-us-box margin-bottom-20">
+                    <div class="icon hover-zoom" id="homeicon">
+                        <i class="flaticon-3-checked"></i>
+                    </div>
+                    <div class="content">
+                        <h4 class="title">GROW BUSINESS</h4>
+                        <p>Ensure your online presence and status among the public to gain remarkable growth for your
+                            business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our Project Gallery -->
+<section class="our-project-area bg-image padding-top-110 padding-bottom-120" id="gallery">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title white desktop-center margin-bottom-55">
+                    <p class="meta">What we done</p>
+                    <h2 id="our-service" class="hover-zoom title">our projects <span>.</span> </h2>
+                </div>
+            </div>
+        </div>
+        <div id="galleryres" class="row no-gutters">
+            {% for gallery in gallery1 %}
+            <div id="gallres" class="col-lg-6">
+                <div class="project-gallery-item hover-zoom">
+                    <img src="{{gallery.image.crop.570x573}}" alt="">
+                    <div class="content">
+                        <div class="caption">
+                            <h2 class="title">{{gallery.title}}</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-lg-6">
+                <div class="row no-gutters">
+                    {% for gallery in gallery2 %}
+                    <div class="col-sm-6">
+                        <div class="project-gallery-item hover-zoom">
+                            <img src="{{gallery.image.crop.285x287}}" alt="">
+                            <div class="content">
+                                <div class="caption">
+                                    <h2 class="title">{{gallery.title}}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for gallery in gallery3 %}
+                    <div class="col-sm-6">
+                        <div class="project-gallery-item hover-zoom">
+                            <img src="{{gallery.image.crop.285x287}}" alt="">
+                            <div class="content">
+                                <a href="#">
+                                    <h2 class="title">{{gallery.title}}</h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for gallery in gallery4 %}
+                    <div class="col-md-12">
+                        <div class="project-gallery-item hover-zoom">
+                            <img src="{{gallery.image.crop.570x287}}" alt="">
+                            <div class="content">
+                                <a href="#">
+                                    <h2 class="title">{{gallery.title}}</h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- testimonial area start  -->
+<section class="testimonial-area padding-bottom-120" id="testimo">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7 col-lg-7">
+                <div class="testimonial-top padding-bottom-50 padding-top-55">
+                    <div class="section-title">
+                        <div class="icon">
+                            <i class="flaticon-right-quote-1"></i>
+                        </div>
+                        <h2 id="GOOSEBUMPS" class="title" style="color: white;">WORDS OF GOOSEBUMPS
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h1 class="clinthead">WHAT <span id="clintheadco">CLIENTS </span> SAY
+        </h1>
+
+        <h5 class="clinpa">Hear from our clients and discover the power of branding done right.
+        </h5>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="testimonial-carousel-area margin-top-100">
+                    <div class="testimonial-carousel">
+                        {% for testimonial in testimonial %}
+                        <div class="single-testimonial-item">
+                            <div class="author-details">
+                                <div class="thumb">
+                                    <img src="{{testimonial.image.crop.120x120}}" alt="testimonial"
+                                        class="rounded-circle hover-zoom ">
+                                </div>
+                                <br>
+                                <div class="author-meta">
+                                    <h4 id="clinttest" class="title" style="color: white;">{{testimonial.name}}</h4>
+                                    <span id="clintdes" class="designation"
+                                        style="color: white ;">{{testimonial.designation}}</span>
+                                </div>
+                                <div class="content">
+                                    <div class="content-wrapper">
+                                        <p id="clintconte" class="description" style="color: white;">
+                                            {{testimonial.decription}}</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- testimonial area end -->
+
+
+
+<!-- Request free quote -->
+<div class="request-area bg-image pt-4" style="background-image: url({% static 'web/img/question.jpg' %})" id="contact">
+    <div class="container">
+        <div class="row no-gutters" id="questres">
+            <div class="col-lg-6" id="question">
+                <div class="left-content-area">
+                    <div class="section-title padding-top-25 margin-bottom-55">
+                        <p class="meta">faqs</p>
+                        <h2 class="title">ANSWERS TO YOUR <span id="clintheadco">BRANDING</span> QUESTIONS
+                        </h2>
+                    </div>
+                    <div class="accordion-wrapper">
+                        <div id="accordion">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <a href="#" data-toggle="collapse" data-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne" class="collapsed">
+                                            How does Gadlix differ from its competitors in the digital marketing
+                                            industry?
+                                        </a>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        At Gadlix, we differentiate ourselves from our competitors by combining
+                                        creativity with data-driven strategies to deliver effective digital marketing
+                                        solutions that help our clients stand out in the market. We offer personalized
+                                        attention to every client, and we always strive to provide the best possible
+                                        results.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            What is the working style of Gadlix?
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Our working style at Gadlix is collaborative, transparent, and iterative. We
+                                        believe in closely collaborating with our clients to understand their business
+                                        needs and goals, and we keep them involved in every step of the digital
+                                        marketing process. We work transparently, communicating regularly with our
+                                        clients to ensure that they are satisfied with our work.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <a href="#" class="collapsed" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            How does Gadlix ensure the success of its digital marketing projects? </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        At Gadlix, we take a comprehensive approach to digital marketing projects,
+                                        focusing on not only design but also on developing effective strategies to
+                                        improve our client's online presence and drive growth. We measure success by the
+                                        impact our branding efforts have on our client's business performance. We
+                                        regularly evaluate our strategies and make adjustments as necessary to ensure
+                                        that our clients achieve their objectives.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <h5 class="mb-0">
+                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Can Gadlix provide customized digital marketing solutions tailored to my
+                                            business needs?
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+
+                                        Absolutely. At Gadlix, we understand that each business is unique, and we strive
+                                        to provide personalized digital marketing services that meet our client's
+                                        specific needs and goals. We work closely with our clients to understand their
+                                        vision and tailor our services to help them achieve their objectives. We take
+                                        pride in our ability to deliver digital marketing solutions that exceed our
+                                        client’s expectations.
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1" id="question">
+                <div class="right-content-area">
+                    <div class="request-page-form-wrap">
+                        <h4 class="title">YOU ARE JUST ONE FORM AWAY FROM US</h4>
+                        <form method="POST" class="request-page-form" novalidate="novalidate" id="form">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        {{form.name}}
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        {{form.company}}
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        {{form.phone}}
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        {{form.email}}
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        {{form.website}}
+
+                                    </div>
+                                </div>
+                                <div class="head-color">
+                                    <h4 style="color: white;">Let us know what you're interested in! Check all that
+                                        apply
+                                    </h4>
+                                    
+                                    <div>
+                                        {{ form.Services }}
+
+                                        <br>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-12" style="padding-top: 15px;">
+                                    <div class="form-group">
+                                        <div class="bnab"><input type="submit" value="Submit Form" id="ba"></div>
+                                        {% comment %} <div class="bn"></div> {% endcomment %}
+                                        {% comment %} submit-btn {% endcomment %}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=======================
+Client Section
+========================-->
+<section class="sectottal">
+    <div class="client-section bg-liteblue padding-top-120">
+        <div class="container" id="clintshowres">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title desktop-center padding-bottom-50">
+                        <h3 id="clinttit" class="client-title">
+                            WHO WORKED WITH US
+
+                        </h3>
+                        <h2 class="hover-zoom" id="clintshow">CLIENT SHOWCASE</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    {% include 'web/partials/clients.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- blog area start  -->
+    <section class="blog-area padding-top-120 padding-bottom-120" id="updates">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title desktop-center padding-top-25 margin-bottom-55">
+                        <p class="meta">whats going on </p>
+                        <h2 class="title hover-zoom">Latest news<span> .</span> </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                {% for update in updates %}
+                <div class="col-lg-4">
+                    <div class="blog-grid-carosel-wrapper">
+                        <div class="blog-grid-  ">
+
+                            <div class="single-blog-grid-01">
+                                <div class="single-blog-grid-thumb">
+                                    <img src="{{update.image.crop.700x802}}" alt="">
+                                </div>
+                                <a href="{% url 'Web:blogDetails' update.slug %}">
+                                    <div class="content">
+                                        <div class="post-date">
+                                            <h2 class="date">{{update.date|date:"d"}}</h2>
+                                            <span>{{update.date|date:"M"}}</span>
+                                        </div>
+                                        <h4 class="title">{{update.title}}</h4>
+                                        <div class="blog-bottom">
+                                            <a href="{% url 'Web:blogDetails' update.slug %}"><span
+                                                    class="border-bottom">Read More</span></a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</section>
+<!-- blog area end -->
+<!-- Contact area start  -->
+
+<!-- Contact area end -->
+{% comment %} *************------------------========================----------------------- {% endcomment %}
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    // Alert Modal Type
+// $(document).on('click', '#ba', function(e) {
+// swal(
+//     'Success',
+//     'message successfully sent',
+//     'success'
+// )
+// });
+
+</script>
+
+{% endblock %}
+
+{% block javascript %}
+
+
+{% endblock %}
